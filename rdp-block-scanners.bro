@@ -7,10 +7,7 @@ export {
 		ScanSummary, 
 	} ; 
 
-	global rdp_scanners_account = /a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z/ &redef ; 
-	redef rdp_scanners_account +=   /A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z/ ; 
-	redef rdp_scanners_account +=   /NCRACK_USER/ ; 
-
+	global rdp_scanners_account = /[a-zA-Z]|NCRACK_USER/ &redef ; 
 
 	global rdp_bruteforcer: table [addr, string] of count &create_expire=1 day &default=0 &redef ; 
 
